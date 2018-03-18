@@ -34,6 +34,7 @@ describe('POST /todos', ()=>{
                 
                 Todo.find({text}).then((todos)=>{
                     expect(todos.length).toBe(1);
+                    console.log(JSON.stringify(todos));
                     expect(todos[0].text).toBe(text);
                     done();
                 }).catch((e)=> done(e));
@@ -50,6 +51,7 @@ describe('POST /todos', ()=>{
                 }
                 Todo.find().then((todos)=>{
                     expect(todos.length).toBe(2);
+                    console.log(JSON.stringify(todos));
                     done();
                 }).catch((e)=> done(e));
             });
