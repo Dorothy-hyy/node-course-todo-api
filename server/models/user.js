@@ -73,6 +73,8 @@ UserSchema.statics.findByToken = function(token){
     });
 };
 
+
+//middleware, should run before save.
 UserSchema.pre('save', function(next){
     var user = this;
 
